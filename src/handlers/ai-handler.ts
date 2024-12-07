@@ -46,12 +46,22 @@ export class AiAgentHandler {
 
                 if(position.buyOnPercentage <= percentage) {
                     // buy token
+                    // buyDcaToken is the amount of token you need to sell of sellTokenAddress
+                    wallet.invokeContract({
+                        // contract call
+                    })
                 }
 
                 if(position.sellOnPercentage >= percentage) {
                     // sell token
+                    // sellDcaToken is the amount of token you need to sell of buyTokenAddress
+                    wallet.invokeContract({
+                        // contract call
+                    })
                 }
             })
+
+            await Promise.all(promises)
         })
     }
 

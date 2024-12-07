@@ -63,6 +63,8 @@ model Position {
   sellTokenAddress String
   buyOnPercentage Int
   sellOnPercentage Int
+  buyDcaToken Int
+  sellDcaToken Int
 
   lastBuyTokenPrice Int @default(0)
 
