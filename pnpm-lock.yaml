@@ -12,8 +12,8 @@ importers:
         specifier: ^0.11.2
         version: 0.11.2(typescript@5.7.2)(zod@3.23.8)
       '@cowprotocol/contracts':
-        specifier: ^1.7.0
-        version: 1.7.0(ethers@6.13.4)
+        specifier: github:cowprotocol/contracts
+        version: https://codeload.github.com/cowprotocol/contracts/tar.gz/9c1984b864d0a6703a877a088be6dac56450808c(ethers@6.13.4)
       '@prisma/client':
         specifier: 6.0.1
         version: 6.0.1(prisma@6.0.1)
@@ -93,8 +93,9 @@ packages:
   '@coinbase/coinbase-sdk@0.11.2':
     resolution: {integrity: sha512-9kEL0aOGqVYabCHsbF5t5VrdfQ92T88N9nQ7RfhbpwEOiWUl8QXGy/NnMpuVtR+p4tpoJrev5Zm8rIGwtmH8LQ==}
 
-  '@cowprotocol/contracts@1.7.0':
-    resolution: {integrity: sha512-tog/0igLaWZv6kK30+aFJ267+yNyMINx6qDHaJQFKZs051XUXnzNFlZgCEfICwDz/821XYjZxOnNbe449tgD5w==}
+  '@cowprotocol/contracts@https://codeload.github.com/cowprotocol/contracts/tar.gz/9c1984b864d0a6703a877a088be6dac56450808c':
+    resolution: {tarball: https://codeload.github.com/cowprotocol/contracts/tar.gz/9c1984b864d0a6703a877a088be6dac56450808c}
+    version: 2.0.0-alpha
     peerDependencies:
       ethers: ^5.4.0
 
@@ -884,7 +885,7 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@cowprotocol/contracts@1.7.0(ethers@6.13.4)':
+  '@cowprotocol/contracts@https://codeload.github.com/cowprotocol/contracts/tar.gz/9c1984b864d0a6703a877a088be6dac56450808c(ethers@6.13.4)':
     dependencies:
       ethers: 6.13.4
 
