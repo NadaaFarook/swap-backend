@@ -8,8 +8,8 @@ export class TxHandler {
     constructor(router: Router) {
         this.router = router;
 
-        this.router.get("/txs");
-        this.router.post("/txs");
+        this.router.get("/txs", this.getTxs.bind(this));
+        this.router.post("/txs", this.createTx.bind(this));
     }
 
     async getTxs(req: Request, res: Response, next: NextFunction) {

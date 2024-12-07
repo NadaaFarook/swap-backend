@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:local": "TS_NODE_TRANSPILE_ONLY=true NODE_ENV=development  node -r ts-node/register --env-file=.env.local src/index.ts",
+    "dev:prod": "TS_NODE_TRANSPILE_ONLY=true NODE_ENV=production node -r ts-node/register -r dotenv/config src/index.ts"
   },
   "keywords": [],
   "author": "",

@@ -12,7 +12,7 @@ export default class App {
 
     constructor(routes: any[]) {
         this.app = express();
-        this.port = process.env.PORT || 5000;
+        this.port = process.env.PORT || 8000;
         this.production = process.env.ENV === "production";
 
         this.initializeMiddleware();
@@ -29,7 +29,7 @@ export default class App {
             );
             console.log(`Server is listening on port ${this.port}`);
             console.log("=====================================");
-            console.log("Connected App", env.APP_URI);
+            console.log("Connected App");
         });
     }
 
