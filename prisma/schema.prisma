@@ -37,6 +37,7 @@ model Pool {
   t1TokenAddress String
   t2TokenAddress String
   name           String
+  poolAddress    String
 
   transactions Transaction[]
 
