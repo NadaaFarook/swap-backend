@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@coinbase/coinbase-sdk": "^0.11.2",
+    "@cowprotocol/contracts": "^1.7.0",
     "@prisma/client": "6.0.1",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
@@ -23,6 +24,7 @@
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
+    "ethers": "^6.13.4",
     "express": "^4.19.2",
     "helmet": "^7.1.0",
     "hpp": "^0.2.3",
