@@ -44,3 +44,33 @@ model Pool {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model AIAgent {
+  id Int @id @default(autoincrement())
+  agentAddress String
+  agentName String
+  ownerAddress String
+  seedPhrase String
+  walletId String
+
+  positions Position[]
+}
+
+model Position {
+  id Int @id @default(autoincrement())
+  buyTokenAddress String
+  networkId String
+  sellTokenAddress String
+  buyOnPercentage Int
+  sellOnPercentage Int
+  buyDcaToken Int
+  sellDcaToken Int
+
+  lastBuyTokenPrice Int @default(0)
+
+  aiAgentId Int
+  aiAgent AIAgent @relation(fields: [aiAgentId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
