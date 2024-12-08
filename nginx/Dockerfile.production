@@ -1,0 +1,6 @@
+FROM nginx:1.25
+
+#  default conf for proxy service
+COPY ./nginx-selfsigned.crt /etc/ssl/certs/nginx-selfsigned.crt 
+COPY ./nginx-selfsigned.key /etc/ssl/private/nginx-selfsigned.key
+COPY ./production.conf /etc/nginx/conf.d/default.conf

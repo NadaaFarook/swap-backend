@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - 8080:8080
+    restart: "on-failure"
+
+  webserver:
+    restart: always
+    build:
+      dockerfile: Dockerfile.production
+      context: ./nginx
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - web
